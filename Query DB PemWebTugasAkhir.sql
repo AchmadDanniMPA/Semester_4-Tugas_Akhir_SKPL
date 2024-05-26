@@ -2,20 +2,30 @@ CREATE DATABASE PemWebTugasAkhir;
 
 USE PemWebTugasAkhir;
 
-CREATE TABLE m_kategori (
-    kategori_id int NOT NULL PRIMARY KEY,
-    kategori_nama varchar(255)
-);
 CREATE TABLE m_user (
-    user_id int NOT NULL PRIMARY KEY,
+    user_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     username varchar(20),
     nama varchar(50),
     password varchar(255)
 );
+CREATE TABLE m_kategori (
+    kategori_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    kategori_nama varchar(255)
+);
 CREATE TABLE m_survey (
-    survey_id int NOT NULL PRIMARY KEY,
+    survey_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     user_id int,
-    survey_jenis enum('jenis1', 'jenis2'), -- template
+    survey_jenis enum(
+        'Mahasiswa', 
+        'Orang Tua', 
+        'Kepuasan Mitra', 
+        'Alumni', 
+        'DosenTendik_Human_Resources_Management', 
+        'DosenTendik_Finance_Management', 
+        'DosenTendik_Facilities_Management', 
+        'DosenTendik_Riset_Activities_Management', 
+        'DosenTendik_Community_Services_Activities_Management'
+    ),
     survey_kode varchar(20),
     survey_nama varchar(50),
     survey_deskripsi text,
@@ -23,17 +33,17 @@ CREATE TABLE m_survey (
     FOREIGN KEY (user_id) REFERENCES m_user(user_id)
 );
 CREATE TABLE m_survey_soal (
-    soal_id int NOT NULL PRIMARY KEY,
+    soal_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     survey_id int,
     kategori_id int,
     no_urut int,
-    soal_jenis enum('jenis1', 'jenis2'), -- template
+    soal_jenis enum('Pilgan', 'Esai'),
     soal_nama varchar(500),
     FOREIGN KEY (survey_id) REFERENCES m_survey(survey_id),
     FOREIGN KEY (kategori_id) REFERENCES m_kategori(kategori_id)
 );
 CREATE TABLE t_responden_dosen (
-    responden_dosen_id int NOT NULL PRIMARY KEY,
+    responden_dosen_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     survey_id int,
     responden_tanggal datetime,
     responden_nip varchar(20),
@@ -42,7 +52,7 @@ CREATE TABLE t_responden_dosen (
     FOREIGN KEY (survey_id) REFERENCES m_survey(survey_id)
 );
 CREATE TABLE t_jawaban_dosen (
-    jawaban_dosen_id int NOT NULL PRIMARY KEY,
+    jawaban_dosen_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     responden_dosen_id int,
     soal_id int,
     jawaban varchar(255),
@@ -50,7 +60,7 @@ CREATE TABLE t_jawaban_dosen (
     FOREIGN KEY (soal_id) REFERENCES m_survey_soal(soal_id)
 );
 CREATE TABLE t_responden_tendik (
-    responden_tendik_id int NOT NULL PRIMARY KEY,
+    responden_tendik_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     survey_id int,
     responden_tanggal datetime,
     responden_nopeg varchar(20),
@@ -59,7 +69,7 @@ CREATE TABLE t_responden_tendik (
     FOREIGN KEY (survey_id) REFERENCES m_survey(survey_id)
 );
 CREATE TABLE t_jawaban_tendik (
-    jawaban_tendik_id int NOT NULL PRIMARY KEY,
+    jawaban_tendik_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     responden_tendik_id int,
     soal_id int,
     jawaban varchar(255),
@@ -67,7 +77,7 @@ CREATE TABLE t_jawaban_tendik (
     FOREIGN KEY (soal_id) REFERENCES m_survey_soal(soal_id)
 );
 CREATE TABLE t_responden_mahasiswa (
-    responden_mahasiswa_id int NOT NULL PRIMARY KEY,
+    responden_mahasiswa_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     survey_id int,
     responden_tanggal datetime,
     responden_nim varchar(20),
@@ -79,7 +89,7 @@ CREATE TABLE t_responden_mahasiswa (
     FOREIGN KEY (survey_id) REFERENCES m_survey(survey_id)
 );
 CREATE TABLE t_jawaban_mahasiswa (
-    jawaban_mahasiswa_id int NOT NULL PRIMARY KEY,
+    jawaban_mahasiswa_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     responden_mahasiswa_id int,
     soal_id int,
     jawaban varchar(255),
@@ -87,7 +97,7 @@ CREATE TABLE t_jawaban_mahasiswa (
     FOREIGN KEY (soal_id) REFERENCES m_survey_soal(soal_id)
 );
 CREATE TABLE t_responden_alumni (
-    responden_alumni_id int NOT NULL PRIMARY KEY,
+    responden_alumni_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     survey_id int,
     responden_tanggal datetime,
     responden_nim varchar(20),
@@ -99,7 +109,7 @@ CREATE TABLE t_responden_alumni (
     FOREIGN KEY (survey_id) REFERENCES m_survey(survey_id)
 );
 CREATE TABLE t_jawaban_alumni (
-    jawaban_alumni_id int NOT NULL PRIMARY KEY,
+    jawaban_alumni_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     responden_alumni_id int,
     soal_id int,
     jawaban varchar(255),
@@ -107,7 +117,7 @@ CREATE TABLE t_jawaban_alumni (
     FOREIGN KEY (soal_id) REFERENCES m_survey_soal(soal_id)
 );
 CREATE TABLE t_responden_ortu (
-    responden_ortu_id int NOT NULL PRIMARY KEY,
+    responden_ortu_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     survey_id int,
     responden_tanggal datetime,
     responden_nama varchar(50),
@@ -123,7 +133,7 @@ CREATE TABLE t_responden_ortu (
     FOREIGN KEY (survey_id) REFERENCES m_survey(survey_id)
 );
 CREATE TABLE t_jawaban_ortu (
-    jawaban_ortu_id int NOT NULL PRIMARY KEY,
+    jawaban_ortu_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     responden_ortu_id int,
     soal_id int,
     jawaban varchar(255),
@@ -131,7 +141,7 @@ CREATE TABLE t_jawaban_ortu (
     FOREIGN KEY (soal_id) REFERENCES m_survey_soal(soal_id)
 );
 CREATE TABLE t_responden_industri (
-    responden_industri_id int NOT NULL PRIMARY KEY,
+    responden_industri_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     survey_id int,
     responden_tanggal datetime,
     responden_nama varchar(50),
@@ -143,7 +153,7 @@ CREATE TABLE t_responden_industri (
     FOREIGN KEY (survey_id) REFERENCES m_survey(survey_id)
 );
 CREATE TABLE t_jawaban_industri (
-    jawaban_industri_id int NOT NULL PRIMARY KEY,
+    jawaban_industri_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     responden_industri_id int,
     soal_id int,
     jawaban varchar(255),
