@@ -20,11 +20,7 @@ CREATE TABLE m_survey (
         'Orang Tua', 
         'Kepuasan Mitra', 
         'Alumni', 
-        'DosenTendik_Human_Resources_Management', 
-        'DosenTendik_Finance_Management', 
-        'DosenTendik_Facilities_Management', 
-        'DosenTendik_Riset_Activities_Management', 
-        'DosenTendik_Community_Services_Activities_Management'
+        'DosenTendik'
     ),
     survey_kode varchar(20),
     survey_nama varchar(50),
