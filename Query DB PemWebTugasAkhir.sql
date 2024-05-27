@@ -20,7 +20,8 @@ CREATE TABLE m_survey (
         'Orang Tua', 
         'Kepuasan Mitra', 
         'Alumni', 
-        'DosenTendik'
+        'Dosen',
+        'Tendik'
     ),
     survey_kode varchar(20),
     survey_nama varchar(50),
