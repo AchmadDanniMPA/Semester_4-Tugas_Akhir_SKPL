@@ -34,7 +34,7 @@ CREATE TABLE m_survey_soal (
     survey_id int,
     kategori_id int,
     no_urut int,
-    soal_jenis enum('Pilgan', 'Esai'),
+    soal_jenis enum('Isian', 'Rating'),
     soal_nama varchar(500),
     FOREIGN KEY (survey_id) REFERENCES m_survey(survey_id),
     FOREIGN KEY (kategori_id) REFERENCES m_kategori(kategori_id)
