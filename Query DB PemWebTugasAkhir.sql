@@ -14,7 +14,6 @@ CREATE TABLE m_kategori (
 );
 CREATE TABLE m_survey (
     survey_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    user_id int,
     survey_jenis enum(
         'Mahasiswa', 
         'Orang Tua', 
@@ -26,8 +25,7 @@ CREATE TABLE m_survey (
     survey_kode varchar(20),
     survey_nama varchar(50),
     survey_deskripsi text,
-    survey_tanggal datetime,
-    FOREIGN KEY (user_id) REFERENCES m_user(user_id)
+    survey_tanggal datetime
 );
 CREATE TABLE m_survey_soal (
     soal_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
