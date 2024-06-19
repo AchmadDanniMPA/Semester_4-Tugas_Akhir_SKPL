@@ -8,7 +8,7 @@ CREATE TABLE m_user (
     nama varchar(50),
     password varchar(255)
 );
-INSERT INTO `m_user` (`user_id`, `username`, `nama`, `password`) VALUES (NULL, 'admin', 'Admin', '$2y$10$d2qc0eQYRZwu6ufvbMJ8YOKzDYpRNl0tEII8Plo7y4a1zCaCxByq2')
+INSERT INTO m_user (user_id, username, nama, password) VALUES (NULL, 'admin', 'Admin', '$2y$10$d2qc0eQYRZwu6ufvbMJ8YOKzDYpRNl0tEII8Plo7y4a1zCaCxByq2');
 CREATE TABLE m_kategori (
     kategori_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     kategori_nama varchar(255)
