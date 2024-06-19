@@ -447,3 +447,64 @@ INSERT INTO m_survey_soal (survey_id, kategori_id, no_urut, soal_jenis, soal_nam
 (6, 25, 1, 'Isian', 'Tuliskan saran-saran atau masukan maupun kritik anda di sini.');
 
 /*insert jawaban, data dosen dan tendik*/
+INSERT INTO t_responden_dosen (survey_id, responden_tanggal, responden_nip, responden_nama, responden_unit) VALUES 
+(1, NOW(), 'NIP001', 'Nama Dosen 1', 'UPA Perpustakaan'),
+(1, NOW(), 'NIP002', 'Nama Dosen 2', 'UPA Perpustakaan'),
+(1, NOW(), 'NIP003', 'Nama Dosen 3', 'UPA Perpustakaan'),
+(1, NOW(), 'NIP004', 'Nama Dosen 4', 'UPA Perpustakaan'),
+(1, NOW(), 'NIP005', 'Nama Dosen 5', 'UPA Perpustakaan');
+INSERT INTO t_responden_dosen (survey_id, responden_tanggal, responden_nip, responden_nama, responden_unit) VALUES 
+(1, NOW(), 'NIP006', 'Nama Dosen 6', 'UPA TIK'),
+(1, NOW(), 'NIP007', 'Nama Dosen 7', 'UPA TIK'),
+(1, NOW(), 'NIP008', 'Nama Dosen 8', 'UPA TIK'),
+(1, NOW(), 'NIP009', 'Nama Dosen 9', 'UPA TIK'),
+(1, NOW(), 'NIP010', 'Nama Dosen 10', 'UPA TIK');
+INSERT INTO t_responden_dosen (survey_id, responden_tanggal, responden_nip, responden_nama, responden_unit) VALUES 
+(1, NOW(), 'NIP011', 'Nama Dosen 11', 'UPA Bahasa'),
+(1, NOW(), 'NIP012', 'Nama Dosen 12', 'UPA Bahasa'),
+(1, NOW(), 'NIP013', 'Nama Dosen 13', 'UPA Bahasa'),
+(1, NOW(), 'NIP014', 'Nama Dosen 14', 'UPA Bahasa'),
+(1, NOW(), 'NIP015', 'Nama Dosen 15', 'UPA Bahasa');
+INSERT INTO t_responden_dosen (survey_id, responden_tanggal, responden_nip, responden_nama, responden_unit) VALUES 
+(1, NOW(), 'NIP016', 'Nama Dosen 16', 'Teknologi Informasi'),
+(1, NOW(), 'NIP017', 'Nama Dosen 17', 'Teknologi Informasi'),
+(1, NOW(), 'NIP018', 'Nama Dosen 18', 'Teknologi Informasi'),
+(1, NOW(), 'NIP019', 'Nama Dosen 19', 'Teknologi Informasi'),
+(1, NOW(), 'NIP020', 'Nama Dosen 20', 'Teknologi Informasi');
+INSERT INTO t_responden_dosen (survey_id, responden_tanggal, responden_nip, responden_nama, responden_unit) VALUES 
+(1, NOW(), 'NIP021', 'Nama Dosen 21', 'Teknik Kimia'),
+(1, NOW(), 'NIP022', 'Nama Dosen 22', 'Teknik Kimia'),
+(1, NOW(), 'NIP023', 'Nama Dosen 23', 'Teknik Kimia'),
+(1, NOW(), 'NIP024', 'Nama Dosen 24', 'Teknik Kimia'),
+(1, NOW(), 'NIP025', 'Nama Dosen 25', 'Teknik Kimia');
+INSERT INTO t_responden_tendik (survey_id, responden_tanggal, responden_nopeg, responden_nama, responden_unit) VALUES 
+(2, NOW(), 'NOPEG001', 'Nama Tendik 1', 'UPA Perpustakaan'),
+(2, NOW(), 'NOPEG002', 'Nama Tendik 2', 'UPA Perpustakaan'),
+(2, NOW(), 'NOPEG003', 'Nama Tendik 3', 'UPA Perpustakaan'),
+(2, NOW(), 'NOPEG004', 'Nama Tendik 4', 'UPA Perpustakaan'),
+(2, NOW(), 'NOPEG005', 'Nama Tendik 5', 'UPA Perpustakaan');
+INSERT INTO t_responden_tendik (survey_id, responden_tanggal, responden_nopeg, responden_nama, responden_unit) VALUES 
+(2, NOW(), 'NOPEG006', 'Nama Tendik 6', 'UPA TIK'),
+(2, NOW(), 'NOPEG007', 'Nama Tendik 7', 'UPA TIK'),
+(2, NOW(), 'NOPEG008', 'Nama Tendik 8', 'UPA TIK'),
+(2, NOW(), 'NOPEG009', 'Nama Tendik 9', 'UPA TIK'),
+(2, NOW(), 'NOPEG010', 'Nama Tendik 10', 'UPA TIK');
+INSERT INTO t_responden_tendik (survey_id, responden_tanggal, responden_nopeg, responden_nama, responden_unit) VALUES 
+(2, NOW(), 'NOPEG011', 'Nama Tendik 11', 'UPA Bahasa'),
+(2, NOW(), 'NOPEG012', 'Nama Tendik 12', 'UPA Bahasa'),
+(2, NOW(), 'NOPEG013', 'Nama Tendik 13', 'UPA Bahasa'),
+(2, NOW(), 'NOPEG014', 'Nama Tendik 14', 'UPA Bahasa'),
+(2, NOW(), 'NOPEG015', 'Nama Tendik 15', 'UPA Bahasa');
+INSERT INTO t_responden_tendik (survey_id, responden_tanggal, responden_nopeg, responden_nama, responden_unit) VALUES 
+(2, NOW(), 'NOPEG016', 'Nama Tendik 16', 'Teknologi Informasi'),
+(2, NOW(), 'NOPEG017', 'Nama Tendik 17', 'Teknologi Informasi'),
+(2, NOW(), 'NOPEG018', 'Nama Tendik 18', 'Teknologi Informasi'),
+(2, NOW(), 'NOPEG019', 'Nama Tendik 19', 'Teknologi Informasi'),
+(2, NOW(), 'NOPEG020', 'Nama Tendik 20', 'Teknologi Informasi');
+INSERT INTO t_responden_tendik (survey_id, responden_tanggal, responden_nopeg, responden_nama, responden_unit) VALUES 
+(2, NOW(), 'NOPEG021', 'Nama Tendik 21', 'Teknik Kimia'),
+(2, NOW(), 'NOPEG022', 'Nama Tendik 22', 'Teknik Kimia'),
+(2, NOW(), 'NOPEG023', 'Nama Tendik 23', 'Teknik Kimia'),
+(2, NOW(), 'NOPEG024', 'Nama Tendik 24', 'Teknik Kimia'),
+(2, NOW(), 'NOPEG025', 'Nama Tendik 25', 'Teknik Kimia');
+/*insert gae respon e chat en aku ae soale rodok ruet njelasnoe*/
