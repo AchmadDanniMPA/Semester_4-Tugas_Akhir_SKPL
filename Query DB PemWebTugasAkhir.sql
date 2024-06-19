@@ -157,7 +157,7 @@ CREATE TABLE t_jawaban_industri (
     FOREIGN KEY (soal_id) REFERENCES m_survey_soal(soal_id)
 );
 
---m_survey
+/*m_survey*/
 INSERT INTO m_survey (survey_id, survey_jenis, survey_kode, survey_nama, survey_deskripsi, survey_tanggal) VALUES
 (1, 'Dosen', 'DSN001', 'Survey Dosen 2024', 'Survey Dosen 2024', CURDATE()),
 (2, 'Tendik', 'TND001', 'Survey Tendik 2024', 'Survey Tendik 2024', CURDATE()),
@@ -166,7 +166,7 @@ INSERT INTO m_survey (survey_id, survey_jenis, survey_kode, survey_nama, survey_
 (5, 'Kepuasan Mitra', 'KPM001', 'Survey Kepuasan Mitra 2024', 'Survey Kepuasan Mitra 2024', CURDATE()),
 (6, 'Alumni', 'ALM001', 'Survey Alumni 2024', 'Survey Alumni 2024', CURDATE());
 
---m_kategori
+/*m_kategori*/
 INSERT INTO m_kategori (kategori_id, kategori_nama) VALUES
 (1, 'Sistem Pengelolaan SDM'),
 (2, 'Sistem Pengelolaan Keuangan'),
@@ -194,8 +194,8 @@ INSERT INTO m_kategori (kategori_id, kategori_nama) VALUES
 (24, 'Pengembangan Diri (Self-Development)'),
 (25, 'Alumni');
 
---m_survey_soal
--- Dosen
+/*m_survey_soal
+Dosen*/
 INSERT INTO m_survey_soal (survey_id, kategori_id, no_urut, soal_jenis, soal_nama) VALUES
 (1, 1, 1, 'Rating', 'Pengelola sumber daya manusia mempunyai ketrampilan dalam menggunakan sumber daya alat yang tersedia'),
 (1, 1, 2, 'Rating', 'Pengelola sumber daya manusia dibekali pengetahuan dalam menjalankan pelayanan yang diberikan'),
@@ -256,7 +256,7 @@ INSERT INTO m_survey_soal (survey_id, kategori_id, no_urut, soal_jenis, soal_nam
 (1, 5, 11, 'Rating', 'P3M Polinema menyelenggarakan konferensi nasional/internasional sebagai salah satu media diseminasi luaran PkM'),
 (1, 5, 12, 'Rating', 'P3M Polinema mendorong partisipasi aktif para pelaksana PkM untuk mempublikasikan artikel di jurnal, pengajuan HKI (Hak Kekayaan Intelektual) melalui sentra KI'),
 (1, 5, 13, 'Rating', 'Polinema melalui Bidang 1 mendanai konferensi nasional/internasional bagi pelaksana kegiatan PkM untuk mendiseminasi hasil PkM');
--- Tendik
+/*Tendik*/
 INSERT INTO m_survey_soal (survey_id, kategori_id, no_urut, soal_jenis, soal_nama) VALUES
 (2, 1, 1, 'Rating', 'Pengelola sumber daya manusia mempunyai ketrampilan dalam menggunakan sumber daya alat yang tersedia'),
 (2, 1, 2, 'Rating', 'Pengelola sumber daya manusia dibekali pengetahuan dalam menjalankan pelayanan yang diberikan'),
@@ -317,12 +317,12 @@ INSERT INTO m_survey_soal (survey_id, kategori_id, no_urut, soal_jenis, soal_nam
 (2, 5, 11, 'Rating', 'P3M Polinema menyelenggarakan konferensi nasional/internasional sebagai salah satu media diseminasi luaran PkM'),
 (2, 5, 12, 'Rating', 'P3M Polinema mendorong partisipasi aktif para pelaksana PkM untuk mempublikasikan artikel di jurnal, pengajuan HKI (Hak Kekayaan Intelektual) melalui sentra KI'),
 (2, 5, 13, 'Rating', 'Polinema melalui Bidang 1 mendanai konferensi nasional/internasional bagi pelaksana kegiatan PkM untuk mendiseminasi hasil PkM');
---mahasiswa
+/*mahasiswa*/
 
---ortu
+/*ortu*/
 
---mitra
+/*mitra*/
 
---alumni
+/*alumni*/
 
---insert jawaban, data dosen dan tendik
+/*insert jawaban, data dosen dan tendik*/
