@@ -196,7 +196,7 @@ INSERT INTO m_kategori (kategori_id, kategori_nama) VALUES
 (22, 'Penggunaan Teknologi Informasi (Information Technology Skill Ability)'),
 (23, 'Pengembangan Diri (Self-Development)'),
 /*alumni*/
-(24, 'Alumni');
+(24, 'Alumni'),
 /*semuanya saran dan kritik*/
 (25, 'Saran & Kritik(Suggestion & Advice)');
 
