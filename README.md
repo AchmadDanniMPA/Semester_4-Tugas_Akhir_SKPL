@@ -29,6 +29,16 @@ Untuk menerapkan platform kepuasan pelanggan fungsional yang mencerminkan materi
 
 ---
 
+## 🔗 Link GitHub Kontributor Projek
+- [Danni](https://github.com/AchmadDanniMPA) – Backend & Analisis
+- [Adam](https://github.com/adamsafril19) – Kueri & Dokumentasi DB
+- [Fannisa](https://github.com/FannisaAzzahra) – Pengujian & Analisis
+- [Irul](https://github.com/KhoirulHidayah) – Pengujian & Implementasi Excel
+- [Melisa](https://github.com/Melisa0oyee) – Kueri & Peninjauan
+- [Rafiu](https://github.com/RafiuMahdaviqia) – Pengujian & Peninjauan
+
+---
+
 ## 🛠️ Alat & Teknologi
 - **Frontend:** Bootstrap, AdminLTE
 - **Backend:** PHP
